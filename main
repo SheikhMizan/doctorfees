@@ -1,19 +1,23 @@
 #include <stdio.h>
+int sum( int fees, int patient);
 int main(){
-    int bd, uk, time, choose;
-
-    printf("Enter Deshi Time! \n");
-    scanf("%d", &time);
-
-    if ( time >= 5 ){
-        bd = time;
-        uk = time - 5;
-        printf("Time in BD: %d \n", bd);
-        printf("Time in UK: %d \n", uk);
-    }else{
-        uk = time - 5;
-        uk = 12 + uk;
-        printf("Time in BD: %d \n", time);
-        printf("Time in UK: %d \n", uk);
-    }
+    int  patient, fees, plate;
+    char doctor[500];
+    printf("Doctor's Name: \n");
+    scanf("%s",&doctor);
+    printf("Doctor's Fees: \n");
+    scanf("%d",&fees);
+    printf("How many patient seen?  \n");
+    scanf("%d",&patient);
+    plate = sum(fees, patient);
+    printf("--------------", plate);
+    printf("--------%s DRAG PHARMACY-------------------------------\n", doctor);
+    printf("--Doctor's Name: %s  --\n", doctor);
+    printf("--Patients Taken: %d  --\n", patient);
+    printf("--Doctor's Fees: %d  --\n", fees);
+    printf("--Total Ruzi: %d  --\n", plate);
+    printf("----------------%s PHARMACY ME AANE KE LIYE THANKS-------------------\n", doctor);
+}
+int sum(int x, int y) {
+    return x * y;
 }
