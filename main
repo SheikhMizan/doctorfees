@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(){
+    int bd, uk, time, choose;
+
+    printf("Enter Deshi Time! \n");
+    scanf("%d", &time);
+
+    if ( time >= 5 ){
+        bd = time;
+        uk = time - 5;
+        printf("Time in BD: %d \n", bd);
+        printf("Time in UK: %d \n", uk);
+    }else{
+        uk = time - 5;
+        uk = 12 + uk;
+        printf("Time in BD: %d \n", time);
+        printf("Time in UK: %d \n", uk);
+    }
+}
